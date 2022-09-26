@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Default" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="io.github.tjwnuk.miniblog.MiniblogApplication" />
+    <module name="miniblog" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

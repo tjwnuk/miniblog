@@ -30,15 +30,17 @@ public class HomeController {
     @ModelAttribute
     public void createEntryList(Model model) {
         Iterable<Entry> entryIterable = entryRepository.findAll();
+
+        entryList.clear();
+
         for (Entry e : entryIterable) {
             entryList.add(e);
         }
+        model.addAttribute("entryList", this.entryList);
     }
 
     @GetMapping("")
     public String home(Model model) {
-//        model.addAttribute("entryList", entryRepository);
-        model.addAttribute(this.entryList);
         return "home";
     }
 }

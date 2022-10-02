@@ -8,12 +8,19 @@ import java.util.Date;
 public class Entry {
     private String username;
     private String content;
+    private Date createdAt;
 
-    public Entry(String username, String content, Date createdAt) {
+    public Entry(String username, String content) {
         this.username = username;
         this.content = content;
-        this.createdAt = createdAt;
+//        this.createdAt = createdAt;
     }
 
-    private Date createdAt;
+    public String getUsername() {
+        return username;
+    }
+
+    public String getContent() {
+        return content;
+    }
 }

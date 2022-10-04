@@ -2,25 +2,30 @@ package io.github.tjwnuk.miniblog.Data;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
+@Entity
 @Data
 public class Entry {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String username;
     private String content;
-    private Date createdAt;
 
     public Entry(String username, String content) {
+        super();
         this.username = username;
         this.content = content;
-//        this.createdAt = createdAt;
     }
 
-    public String getUsername() {
-        return username;
+    public Entry() {
+//        super();
     }
 
-    public String getContent() {
-        return content;
-    }
 }

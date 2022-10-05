@@ -1,0 +1,16 @@
+<div class="container" th:fragment="entries">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card" th:each="entry : ${entryList}">
+                <div class="card-body">
+                    <h5 class="card-title" th:text="${entry.getUsername()}"></h5>
+                    <h6 class="card-subtitle mb-2 text-muted"></h6>
+                    <p class="card-text" th:text="${entry.getContent()}"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 bg-info" style="--bs-bg-opacity: .5;">
+            chmura tagów i menu
+        </div>
+    </div>
+</div>

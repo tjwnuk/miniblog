@@ -1,5 +1,11 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <div th:replace="fragments/layout :: header"></div>
 <h1>dodaj wpis</h1>
+<form action="#" th:action="@{/add}" th:object="${newEntry}" method="post">
+    <p>Nazwa użytkownika: <input type="text" th:field="*{username}" /></p>
+    <p>Treść: <input type="text" th:field="*{content}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" />
+</form>
+
 <div th:replace="fragments/layout :: footer"></div>
 </html>

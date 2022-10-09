@@ -3,6 +3,7 @@ package io.github.tjwnuk.miniblog.Controllers;
 import io.github.tjwnuk.miniblog.Data.Entry;
 import io.github.tjwnuk.miniblog.Data.EntryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +30,7 @@ public class HomeController {
 
     @ModelAttribute
     public void createEntryList(Model model) {
-        Iterable<Entry> entryIterable = entryRepository.findAll();
+        Iterable<Entry> entryIterable = entryRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
 
         entryList.clear();
 

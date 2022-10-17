@@ -21,8 +21,6 @@ public class MiniblogApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		entryRepository.save(new Entry("m__b", "witaj świecie"));
-		entryRepository.save(new Entry("a__s", "zapraszam na mój instagram"));
-		entryRepository.save(new Entry("testoviron", "bogactwooo..."));
+
 	}
 }
